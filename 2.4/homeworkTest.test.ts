@@ -102,7 +102,7 @@ describe("Employee Manager 1.2", () => {
                 await (await driver.findElement(bernice)))
     });
 });
-
+// no questions, just adding a comment
     describe("handles error messages correctly", () => {
         test("shows an error message for an empty name field", async () => {
             /*
