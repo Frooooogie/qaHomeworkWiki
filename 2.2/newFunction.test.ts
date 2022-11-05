@@ -7,10 +7,11 @@ describe("myFunction", () => {
   it("returns the word 'false' if I pass in a number less than 5", () => {
     expect(myFunction(1)).toBe("false");
   });
-  it("returns the word 'big' if I pass in a numbewr greater than 5", () => {
+  it("returns the word 'big' if I pass in a number greater than 5", () => {
     expect(myFunction(100)).toBe("big");
   });
   it("returns the word 'negative' if a negative number is passed in", () => {
     expect(myFunction(-1)).toBe("negative");
   });
 });
+
