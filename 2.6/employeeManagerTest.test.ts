@@ -8,10 +8,12 @@ import {Builder,By, Capabilities, until, WebDriver, } from "selenium-webdriver";
   class employeePage {
       driver: WebDriver;
       url: string = "https://devmountain-qa.github.io/employee-manager/1.2_Version/index.html";
-        //FILL OUT LOCATORS CONSTRUCTOR AND METHODS IN ORDER TO PASS THE TEST
+      constructor(driver: WebDriver, url: string){
+          this.driver = driver
+          this.url = url
   }
 
-  describe("Employee Manger Test", () => {
+  describe( "Employee Manager Test",  () => {
       beforeEach(async () => {
           await employeePage.navigate();
       })
@@ -33,4 +35,4 @@ import {Builder,By, Capabilities, until, WebDriver, } from "selenium-webdriver";
           await driver.findElement(emPage.titleInput).sendKeys("Change this")
   })
 
-  /* this is a commment */
+}
