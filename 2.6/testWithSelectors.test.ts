@@ -12,13 +12,14 @@ describe("Filling in the blanks", () => {
         await driver.quit();
     })
 
-    const hdrInput: By = By. //fill in the blank
-    const mkeInput: By = By. //fill in the blank
-    const oaiInput: By = By. //fill in the blank
-    const nameInput: By = By. //fill in the blank
-    const clrBtn: By = By. //fill in blank 
-    const submitBtn: By = By. //fill in blank
-    const errorMsg: By = By. // fill in blank 
+
+    const hdrInput: By = By.id("hdrInput")
+    const mkeInput: By = By.id("mkeInput")
+    const oaiInput: By = By.id("oaiInput")
+    const nameInput: By = By.id("nameInput")
+    const clrBtn: By = By.id("clrBtn") 
+    const submitBtn: By = By.id("submitBtn")
+    const errorMsg: By = By.id("errorMsg")
 
     test("filling in the blanks for real", () => {
         await driver.findElement(hdrInput).sendKeys("Change this")
