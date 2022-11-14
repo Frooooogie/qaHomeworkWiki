@@ -14,10 +14,13 @@ import {Builder, By, Capabilities, until, WebDriver, } from "selenium-webdriver"
 
 
   }}
+  import {employeeManPO} from "./employeeManagerPage";
 
-  describe ("Employee Manager Test",  ()) => {
+const emPage = new employeeManPO(driver);
+
+  describe ("Employee Manager Test",  () => {
       beforeEach(async () => {
-          await employeePage.navigate();
+          await emPage.navigate();
       })
       afterAll(async () => {
           await driver.quit()
@@ -36,4 +39,4 @@ import {Builder, By, Capabilities, until, WebDriver, } from "selenium-webdriver"
           await driver.findElement(emPage.titleInput).clear()
           await driver.findElement(emPage.titleInput).sendKeys("Change this")
   })
-  }
+})
