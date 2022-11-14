@@ -1,4 +1,4 @@
-import {Builder, By, Capabilities, WebDriver} from "selenium-webdriver"
+import {Builder, By, Capabilities, WebDriver, until } from "selenium-webdriver"
 
 const chromedriver = require("chromedriver")
 
@@ -21,7 +21,7 @@ describe("Filling in the blanks", () => {
     const submitBtn: By = By.id("submitBtn")
     const errorMsg: By = By.id("errorMsg")
 
-    test("filling in the blanks for real", () => {
+    test("filling in the blanks for real", async() => {
         await driver.findElement(hdrInput).sendKeys("Change this")
         await driver.findElement(mkeInput).sendKeys("change this")
         await driver.findElement(oaiInput).sendKeys("change this")

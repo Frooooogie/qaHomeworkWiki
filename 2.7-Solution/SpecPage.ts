@@ -7,7 +7,7 @@ export class SpecPage {
     url: string = "https://www.google.com";
 
     searchBar: By = By.name('q')
-    results: By = By.id("rso")
+    results: By = By.id('rso')
 
     constructor(driver: WebDriver) {
         this.driver = driver;

@@ -1,4 +1,4 @@
-import {Builder,By, Capabilities, until, WebDriver, } from "selenium-webdriver";
+import {Builder, By, Capabilities, until, WebDriver, } from "selenium-webdriver";
   const chromedriver = require("chromedriver");
 
   const driver: WebDriver = new Builder()
@@ -11,9 +11,11 @@ import {Builder,By, Capabilities, until, WebDriver, } from "selenium-webdriver";
       constructor(driver: WebDriver, url: string){
           this.driver = driver
           this.url = url
-  }
 
-  describe( "Employee Manager Test",  () => {
+
+  }}
+
+  describe ("Employee Manager Test",  ()) => {
       beforeEach(async () => {
           await employeePage.navigate();
       })
@@ -34,5 +36,4 @@ import {Builder,By, Capabilities, until, WebDriver, } from "selenium-webdriver";
           await driver.findElement(emPage.titleInput).clear()
           await driver.findElement(emPage.titleInput).sendKeys("Change this")
   })
-
-}
+  }
